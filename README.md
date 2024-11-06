@@ -26,6 +26,7 @@ transformers==4.24.0
 requests==2.28.1
 torch==1.13.0
 ipython==8.5.0  # Optional for additional display functionality
+```
 
 ## Setup Instructions
 1. Clone the repository
