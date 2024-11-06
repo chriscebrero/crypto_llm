@@ -2,6 +2,8 @@
 
 This project provides a Jupyter Notebook that fetches recent cryptocurrency data, processes it using the CoinGecko API, and generates a concise summary using a language model from Hugging Face's `transformers` library. The notebook features an interactive UI created with `ipywidgets` for selecting a cryptocurrency symbol, fetching data, and displaying a summary along with recent prices.
 
+[OPEN THE PROJECT ON COLAB](https://colab.research.google.com/github/chriscebrero/crypto_llm/blob/master/cryptocurrency_summary.ipynb)
+
 ## Project Overview
 
 The main goals of this project are to:
@@ -20,15 +22,25 @@ The main goals of this project are to:
 To run this notebook, you need the following Python packages:
 
 ```plaintext
-pandas==1.5.0
-ipywidgets==7.6.5
-transformers==4.24.0
-requests==2.28.1
-torch==1.13.0
-ipython==8.5.0  # Optional for additional display functionality
-```s
+ipywidgets==7.7.1
+pandas<2.2.0  # As cudf requires pandas <2.2
+numpy<2.0.0  # As many dependencies are incompatible with numpy 2.0.2
+gensim<4.4.0
+langchain<0.3.5  # To stay compatible with numpy<2.0
+matplotlib<3.8.0
+tf-keras<2.17.0  # tf-keras requires tensorflow<2.18
+tensorflow<2.18
+torch==2.5.0  # Compatible with torchaudio and torchvision
+torchvision==0.20.0+cu121  # Compatible with torch 2.5.0 and CUDA 12
+torchaudio==2.5.0+cu121
+yfinance==0.2.48
+transformers==4.31.0
+```
 
-## Setup Instructions
+## Setup Instructions (Google Colab)
+1. Run the scripts at the top to make sure all dependencies are included, and being able to access the helper functions
+
+## Setup Instructions (Locally)
 1. Clone the repository
 `git clone <repository_url>`
 
